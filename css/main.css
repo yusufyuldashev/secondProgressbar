@@ -1,0 +1,117 @@
+/* Common styles */
+html{
+  box-sizing: border-box;
+}
+*, *::after, *::before{
+  box-sizing: inherit;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  background: #823BA4;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container{
+  display: flex;
+  width: 750px;
+  min-height: 160px;
+  padding: 25px;
+  border-radius: 7px;
+  border: 2px solid #DEDEDE;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  background: #fff;
+}
+
+.steps {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.step {
+  margin: 10px 0;
+}
+.step-label {
+  display: flex;
+  align-items: center;
+  color: #838383;
+  cursor: pointer;
+  transition: .1s;
+}
+.label-1::before{
+  content: '1';
+}
+.label-2::before{
+  content: '2';
+}
+.label-3::before{
+  content: '3';
+}
+.step-label::before {
+  position: relative;
+  width: 28px;
+  height: 28px;
+  margin-right: 12px;
+  color: #757575;
+  font-weight: bold;
+  background: #F7F7F7;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 29px;
+  font-size: 17px;
+  transition: .1s;
+}
+.step-label:hover{
+  color: #000;
+}
+.step-input:checked ~ .step-label {
+  color: #000;
+}
+
+.step-input:checked ~ .step-label::before {
+  color: #fff;
+  background: #2574AF;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.content-text {
+  margin: 0;
+}
+.content-button {
+  font-size: 20px;
+  background: #EFEFEF;
+  border: 0;
+  border-radius: 4px;
+  outline: 0;
+  padding: 0.7em 0.85em;
+  cursor: pointer;
+  transition: .1s;
+}
+.content-button:hover {
+  background: #E5E5E5;
+}
+.content-button:active {
+  transform: translateY(-2px);
+}
+.back{
+  display: none;
+}
